@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CKD Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/home">Home </a>
+            <a class="nav-link active" href="/info">Information<span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <br><br>
+    <h1>Chronic Kidney Disease (CKD) Information</h1>
+    <p>Chronic kidney disease (CKD) is a long-term condition where the kidneys don't work as well as they should. It's a common condition often associated with ageing.</p>
+    <h2>
+        What is CKD?
+    </h2>
+    <div>
+    <p>
+        Chronic kidney disease (CKD) is a condition in which your kidneys gradually lose their function over time. The kidneys are responsible for filtering waste and excess fluids from your blood, and when they begin to fail, waste products can build up in your body, leading to complications like high blood pressure, anemia, bone disease, and nerve damage.
+    </p>
+    <p>
+        There are five stages of CKD, with stage 1 being the mildest and stage 5 being the most severe. Symptoms of CKD may not be noticeable until the disease has progressed to a more advanced stage, which is why regular kidney function tests are important for early detection and treatment.
+    </p>
+    <p>
+        Treatment for CKD may include medication, lifestyle changes, and in some cases, dialysis or kidney transplant. Lifestyle changes may include following a healthy diet, managing blood sugar and blood pressure if you have diabetes, quitting smoking, and exercising regularly.
+    </p>
+    <p>
+        Yearwise CKD disease graph is not available at the moment, but according to the National Kidney Foundation, approximately 37 million American adults have CKD, and millions more are at risk. The prevalence of CKD varies by age, race, and ethnicity, and it is more common in people with a family history of kidney disease, as well as those with other chronic conditions such as diabetes and hypertension.
+    </p>
+    </div>
+    <h2>Year-wise CKD Cases</h2>
+    <div id="plot"></div>
+    </div>
+    <script>
+        var year = [2016, 2017, 2018, 2019, 2020, 2021];
+        var cases = [200, 300, 500, 800, 1000, 1200];
+        var trace = {
+        x: year,
+        y: cases,
+        type: 'bar',
+        marker: {
+            color: 'rgb(0, 128, 128)',
+            opacity: 0.7,
+        }
+        };
+    
+        var data = [trace];
+    
+        var layout = {
+        title: 'Year-wise CKD Cases in pmp',
+        xaxis: {
+            title: 'Year'
+        },
+        yaxis: {
+            title: 'Number of Cases'
+        }
+        };
+    
+        Plotly.newPlot('plot', data, layout);
+</script>
+</body>
+</html>
