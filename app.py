@@ -67,6 +67,9 @@ def predict():
 def info():
     return render_template('info.html')
 
+@app.route('/algorithm')
+def algorithm():
+    return render_template('algorithm.html')
 
 
 
